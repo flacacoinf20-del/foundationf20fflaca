@@ -4,68 +4,45 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileLinks = document.querySelectorAll(".mobile-menu a");
   const copyButton = document.querySelector(".copy-btn");
 
-  function closeMenu() {
-    if (!mobileMenu || !menuToggle) return;
-    mobileMenu.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    document.body.classList.remove("menu-open");
-  }
-
-  function openMenu() {
-    if (!mobileMenu || !menuToggle) return;
-    mobileMenu.classList.add("open");
-    menuToggle.setAttribute("aria-expanded", "true");
-    document.body.classList.add("menu-open");
-  }
-
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener("click", () => {
-      const isOpen = mobileMenu.classList.contains("open");
-      if (isOpen) closeMenu();
-      else openMenu();
+      const isOpen = mobileMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
     mobileLinks.forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!mobileMenu.classList.contains("open")) return;
-
-      const clickedInsideMenu = mobileMenu.contains(e.target);
-      const clickedToggle = menuToggle.contains(e.target);
-
-      if (!clickedInsideMenu && !clickedToggle) {
-        closeMenu();
-      }
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 960) closeMenu();
+      if (window.innerWidth > 960) {
+        mobileMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
     });
   }
 
   if (copyButton) {
     copyButton.addEventListener("click", async () => {
       const targetId = copyButton.getAttribute("data-copy-target");
-      const target = document.getElementById(targetId);
-      if (!target) return;
+      const target = targetId ? document.getElementById(targetId) : null;
+      const text = target ? target.textContent.trim() : "";
 
-      const text = target.textContent.trim();
+      if (!text) return;
 
       try {
         await navigator.clipboard.writeText(text);
-        const original = copyButton.textContent;
+        const originalText = copyButton.textContent;
         copyButton.textContent = "Copied";
-        setTimeout(() => {
-          copyButton.textContent = original;
+
+        window.setTimeout(() => {
+          copyButton.textContent = originalText;
         }, 1600);
-      } catch (err) {
-        console.error("Clipboard failed", err);
+      } catch (error) {
+        console.error("Clipboard copy failed:", error);
       }
     });
   }
