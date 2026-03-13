@@ -16,6 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
         menuToggle.setAttribute("aria-expanded", "false");
       });
     });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 960) {
+        mobileMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
   }
 
   if (copyButton) {
@@ -30,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
         await navigator.clipboard.writeText(text);
         const originalText = copyButton.textContent;
         copyButton.textContent = "Copied";
-        setTimeout(() => {
+
+        window.setTimeout(() => {
           copyButton.textContent = originalText;
         }, 1600);
       } catch (error) {
