@@ -1,56 +1,41 @@
-const navToggle = document.querySelector('.nav-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
-const copyContractButton = document.getElementById('copy-contract');
-const currentYear = document.getElementById('current-year');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const mobileLinks = document.querySelectorAll(".mobile-menu a");
+  const copyButton = document.querySelector(".copy-btn");
 
-if (currentYear) {
-  currentYear.textContent = new Date().getFullYear();
-}
-
-if (navToggle && mobileMenu) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('is-open');
-    navToggle.classList.toggle('is-active', isOpen);
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-    document.body.classList.toggle('menu-open', isOpen);
-  });
-
-  mobileLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('is-open');
-      navToggle.classList.remove('is-active');
-      navToggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('menu-open');
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
-  });
-}
 
-if (copyContractButton) {
-  copyContractButton.addEventListener('click', async () => {
-    const contract = copyContractButton.dataset.contract;
-    const action = copyContractButton.querySelector('.contract-action');
-    if (!contract || !navigator.clipboard) {
-      return;
-    }
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 
-    try {
-      await navigator.clipboard.writeText(contract);
-      if (action) {
-        const previousText = action.textContent;
-        action.textContent = 'Copied';
+  if (copyButton) {
+    copyButton.addEventListener("click", async () => {
+      const targetId = copyButton.getAttribute("data-copy-target");
+      const target = targetId ? document.getElementById(targetId) : null;
+      const text = target ? target.textContent.trim() : "";
+
+      if (!text) return;
+
+      try {
+        await navigator.clipboard.writeText(text);
+        const originalText = copyButton.textContent;
+        copyButton.textContent = "Copied";
         setTimeout(() => {
-          action.textContent = previousText;
-        }, 1800);
+          copyButton.textContent = originalText;
+        }, 1600);
+      } catch (error) {
+        console.error("Clipboard copy failed:", error);
       }
-    } catch {
-      if (action) {
-        const previousText = action.textContent;
-        action.textContent = 'Error';
-        setTimeout(() => {
-          action.textContent = previousText;
-        }, 1800);
-      }
-    }
-  });
-}
+    });
+  }
+});

@@ -21,6 +21,12 @@
   <nav>
     <a class="nav-logo" href="#home">F20<span>F</span></a>
 
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <ul class="nav-links">
       <li class="nav-item">
         <a href="#identity">Foundation <span class="arrow">&#9660;</span></a>
@@ -60,12 +66,12 @@
         <a href="#koin">Flaca Koin</a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item nav-cta-item">
         <a
+          class="nav-buy"
           href="https://dex.coinmarketcap.com/token/solana/GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump/"
           target="_blank"
           rel="noopener noreferrer"
-          style="color: var(--orange-fire); border: 1px solid rgba(255,107,0,0.4); padding: 0.4rem 1.1rem; margin-left: 0.5rem;"
         >
           Buy Token
         </a>
@@ -73,8 +79,27 @@
     </ul>
   </nav>
 
+  <div class="mobile-menu">
+    <a href="#identity">Foundation</a>
+    <a href="#mission">Mission</a>
+    <a href="#factor">Factor 20</a>
+    <a href="#flaca">Bolivia</a>
+    <a href="#lines">Programs</a>
+    <a href="#governance">Governance</a>
+    <a href="#koin">Flaca Koin</a>
+    <a
+      class="mobile-buy"
+      href="https://dex.coinmarketcap.com/token/solana/GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Buy Token
+    </a>
+  </div>
+
   <section class="hero" id="home">
     <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
 
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
@@ -198,7 +223,7 @@
 
       <div>
         <div class="section-label">Science of Wanting to Be</div>
-        <h2 class="section-title" style="font-size: 2.2rem;">Treaty of the <span>20 Keys</span></h2>
+        <h2 class="section-title factor-side-title">Treaty of the <span>20 Keys</span></h2>
         <p class="section-body">
           A sequence of ethical codes designed to move the person from vulnerability to
           conscious self-mastery through four transformational stages.
@@ -328,7 +353,7 @@
       resilience, culture, and food sovereignty.
     </p>
 
-    <div class="lines-grid" style="margin-top: 3rem;">
+    <div class="lines-grid">
       <div class="line-card">
         <img
           src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=900&q=70"
@@ -482,10 +507,10 @@
         <span class="gov-badge">Strategic Discipline</span>
       </div>
 
-      <div class="gov-card" style="background: rgba(255,107,0,0.04); border-color: rgba(255,107,0,0.18);">
+      <div class="gov-card gov-card-highlight">
         <div class="gov-role">Institutional Core</div>
-        <div class="gov-name" style="color: var(--orange-fire);">Foundational Motto</div>
-        <p style="font-style: italic; font-size: 1.05rem; color: var(--off-white); line-height: 1.65;">
+        <div class="gov-name gov-name-highlight">Foundational Motto</div>
+        <p class="gov-quote">
           "Love changes everything. It transforms everything."
         </p>
         <span class="gov-badge">F20F Foundation</span>
@@ -503,6 +528,15 @@
       help finance surgeries, sterilization campaigns, and emergency veterinary action
       for abandoned animals in Bolivia.
     </p>
+
+    <div class="token-chart">
+      <iframe
+        src="https://dexscreener.com/solana/GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump?embed=1&theme=dark"
+        title="Flaca Koin live chart"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
 
     <div class="koin-steps">
       <div class="koin-step">
@@ -525,10 +559,11 @@
 
     <div class="koin-contract">
       <span class="contract-label">Solana Contract Address · Ticker: FlacaKoin</span>
-      <span class="contract-addr">GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump</span>
+      <span class="contract-addr" id="contractAddress">GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump</span>
+      <button class="copy-btn" type="button" data-copy-target="contractAddress">Copy Contract</button>
     </div>
 
-    <div class="hero-cta" style="justify-content: center; margin-top: 2rem;">
+    <div class="hero-cta koin-cta">
       <a
         href="https://dex.coinmarketcap.com/token/solana/GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump/"
         class="btn-primary"
@@ -537,8 +572,13 @@
       >
         Open Live Token Page
       </a>
-      <a href="mailto:info@f20ffoundation.org" class="btn-secondary">
-        Institutional Contact
+      <a
+        href="https://dexscreener.com/solana/GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump"
+        class="btn-secondary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Open DexScreener
       </a>
     </div>
   </section>
