@@ -728,19 +728,21 @@ section {
   overflow: hidden;
   height: 480px;
   border: 1px solid rgba(255, 107, 0, 0.12);
+  background: #061225;
 }
 
 .flaca-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  filter: saturate(0.92) brightness(0.84);
+  object-fit: contain;
+  object-position: center center;
+  filter: saturate(0.92) brightness(0.9);
   transition: transform 0.6s ease;
+  padding: 1rem;
 }
 
 .flaca-img-wrap:hover img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .flaca-img-wrap::after {
@@ -750,6 +752,7 @@ section {
   background:
     linear-gradient(to top, rgba(5, 15, 31, 0.88) 0%, rgba(5, 15, 31, 0.22) 48%, transparent 72%),
     linear-gradient(135deg, rgba(255, 107, 0, 0.05), rgba(5, 15, 31, 0.15));
+  pointer-events: none;
 }
 
 .flaca-img-label {
@@ -779,6 +782,7 @@ section {
   overflow: hidden;
   height: 340px;
   border: 1px solid rgba(255, 255, 255, 0.04);
+  background: #09172d;
 }
 
 .line-card img {
@@ -790,33 +794,31 @@ section {
   transition: filter 0.4s ease, transform 0.5s ease;
 }
 
-.line-card:nth-child(1) img {
-  object-position: center center;
-}
-
-.line-card:nth-child(2) img {
-  object-position: center center;
-}
-
-.line-card:nth-child(3) img {
-  object-position: center top;
-}
-
-.line-card:nth-child(4) img {
-  object-position: center center;
-}
-
-.line-card:nth-child(5) img {
-  object-position: center center;
-}
-
+.line-card:nth-child(1) img,
+.line-card:nth-child(2) img,
+.line-card:nth-child(4) img,
+.line-card:nth-child(5) img,
 .line-card:nth-child(6) img {
+  object-fit: cover;
   object-position: center center;
+}
+
+/* Women as Agents of Change */
+.line-card:nth-child(3) img {
+  object-fit: contain;
+  object-position: center center;
+  padding: 1rem;
+  filter: brightness(0.6) saturate(0.75);
+  background: #09172d;
 }
 
 .line-card:hover img {
   filter: brightness(0.58) saturate(0.84);
   transform: scale(1.04);
+}
+
+.line-card:nth-child(3):hover img {
+  transform: scale(1.02);
 }
 
 .line-card::after {
@@ -1230,7 +1232,8 @@ footer {
   }
 
   .flaca-img-wrap img {
-    object-position: center top;
+    object-fit: contain;
+    padding: 0.8rem;
   }
 
   .day21 {
@@ -1262,9 +1265,12 @@ footer {
   }
 
   .mission-img,
-  .flaca-img-wrap,
   .line-card {
     height: 300px;
+  }
+
+  .flaca-img-wrap {
+    height: 360px;
   }
 
   .lines-grid,
@@ -1272,12 +1278,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .flaca-img-wrap {
-    height: 340px;
-  }
-
+  .line-card:nth-child(3) img,
   .flaca-img-wrap img {
-    object-position: center 18%;
+    object-fit: contain;
+    padding: 0.75rem;
   }
 
   .koin-contract {
@@ -1355,13 +1359,18 @@ footer {
   }
 
   .mission-img,
-  .flaca-img-wrap,
   .line-card {
     height: 260px;
   }
 
-  .flaca-img-wrap img {
-    object-position: center 12%;
+  .flaca-img-wrap {
+    height: 320px;
+  }
+
+  .flaca-img-wrap img,
+  .line-card:nth-child(3) img {
+    object-fit: contain;
+    padding: 0.75rem;
   }
 }
 
