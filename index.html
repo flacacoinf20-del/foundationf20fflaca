@@ -3,12 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>F20F Foundation — Factor 20</title>
   <meta
     name="description"
     content="F20F Foundation is an international 501(c)(3) non-profit advancing the Factor 20 methodology, youth leadership, and the Flaca animal rescue mission in Bolivia."
   />
   <meta name="theme-color" content="#050f1f" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="F20F Foundation — Factor 20" />
+  <meta
+    property="og:description"
+    content="International 501(c)(3) foundation advancing Factor 20, youth leadership, and the Flaca rescue mission in Bolivia."
+  />
+  <meta property="og:url" content="https://f20ffoundation.org" />
+  <meta property="og:image" content="https://f20ffoundation.org/assets/brand/og-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="F20F Foundation — Factor 20" />
+  <meta
+    name="twitter:description"
+    content="International 501(c)(3) foundation advancing Factor 20, youth leadership, and the Flaca rescue mission in Bolivia."
+  />
+  <meta name="twitter:image" content="https://f20ffoundation.org/assets/brand/og-cover.jpg" />
+
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -19,7 +40,10 @@
 </head>
 <body>
   <nav>
-    <a class="nav-logo" href="#home">F20<span>F</span></a>
+    <a class="nav-logo nav-logo-with-image" href="#home" aria-label="F20F Foundation home">
+      <img src="assets/brand/logo-f20f.png" alt="F20F Foundation logo" class="nav-logo-image" />
+      <span class="nav-logo-text">F20<span>F</span></span>
+    </a>
 
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
       <span></span>
@@ -178,7 +202,7 @@
   <section class="mission" id="mission">
     <div class="mission-img">
       <img
-        src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=1200&q=80"
+        src="assets/images/program-youth-leadership.jpg"
         alt="Youth transformation program"
         loading="lazy"
       />
@@ -319,7 +343,7 @@
   <section class="flaca" id="flaca">
     <div class="flaca-img-wrap">
       <img
-        src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&q=80"
+        src="assets/images/flaca-bolivia.jpg"
         alt="Flaca rescue mission"
         loading="lazy"
       />
@@ -356,7 +380,7 @@
     <div class="lines-grid">
       <div class="line-card">
         <img
-          src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=900&q=70"
+          src="assets/images/program-animal-rescue.jpg"
           alt="Animal rescue"
           loading="lazy"
         />
@@ -371,7 +395,7 @@
 
       <div class="line-card">
         <img
-          src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=900&q=70"
+          src="assets/images/program-youth-leadership.jpg"
           alt="Youth leadership"
           loading="lazy"
         />
@@ -386,7 +410,7 @@
 
       <div class="line-card">
         <img
-          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=70"
+          src="assets/images/program-women.jpg"
           alt="Women empowerment"
           loading="lazy"
         />
@@ -401,7 +425,7 @@
 
       <div class="line-card">
         <img
-          src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&q=70"
+          src="assets/images/program-media-truth.jpg"
           alt="Media truth democracy"
           loading="lazy"
         />
@@ -416,7 +440,7 @@
 
       <div class="line-card">
         <img
-          src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=900&q=70"
+          src="assets/images/program-hydroponics.jpg"
           alt="Urban hydroponics"
           loading="lazy"
         />
@@ -431,7 +455,7 @@
 
       <div class="line-card">
         <img
-          src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=900&q=70"
+          src="assets/images/program-culture-art.jpg"
           alt="Culture and art"
           loading="lazy"
         />
@@ -529,13 +553,12 @@
       for abandoned animals in Bolivia.
     </p>
 
-    <div class="token-chart">
-      <iframe
-        src="https://dexscreener.com/solana/GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump?embed=1&theme=dark"
-        title="Flaca Koin live chart"
-        loading="lazy"
-        allowfullscreen
-      ></iframe>
+    <div class="token-status-card">
+      <div class="token-status-label">Official token access</div>
+      <p>
+        Use the official CoinMarketCap Dex link and the contract below as the live public reference
+        for FlacaKoin on Solana.
+      </p>
     </div>
 
     <div class="koin-steps">
@@ -553,7 +576,7 @@
       </div>
       <div class="koin-step">
         <div class="koin-step-num">04</div>
-        <p>Access the live token page and support the rescue mission directly.</p>
+        <p>Open the live token page and support the rescue mission directly.</p>
       </div>
     </div>
 
@@ -573,12 +596,12 @@
         Open Live Token Page
       </a>
       <a
-        href="https://dexscreener.com/solana/GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump"
+        href="https://dex.coinmarketcap.com/token/solana/GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump/"
         class="btn-secondary"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Open DexScreener
+        View Token Details
       </a>
     </div>
   </section>
