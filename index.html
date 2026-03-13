@@ -1,459 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>F20F Foundation — Factor 20</title>
-  <meta name="description" content="F20F Foundation: Factor 20, structural transformation, Bolivia, Flaca Effect, and Flaca Koin on Solana.">
-  <meta name="theme-color" content="#050f1f">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta
+    name="description"
+    content="F20F Foundation is an international 501(c)(3) non-profit advancing the Factor 20 methodology, youth leadership, and the Flaca animal rescue mission in Bolivia."
+  />
+  <meta name="theme-color" content="#050f1f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,800;1,300&family=Barlow+Condensed:wght@700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar" aria-label="Main navigation">
-      <a class="nav-logo" href="#home" aria-label="F20F Foundation home">F20<span>F</span></a>
+  <nav>
+    <a class="nav-logo" href="#home">F20<span>F</span></a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <ul class="nav-links">
+      <li class="nav-item">
+        <a href="#identity">Foundation <span class="arrow">&#9660;</span></a>
+        <div class="dropdown">
+          <a href="#identity">Who We Are</a>
+          <a href="#mission">Our Mission</a>
+          <a href="#governance">Leadership Team</a>
+        </div>
+      </li>
 
-      <ul class="nav-links" id="desktop-menu">
-        <li class="nav-item has-dropdown">
-          <a href="#identity">Foundation <span class="arrow">▼</span></a>
-          <div class="dropdown">
-            <a href="#identity">Who We Are</a>
-            <a href="#mission">Our Mission</a>
-            <a href="#governance">Leadership Team</a>
-          </div>
-        </li>
+      <li class="nav-item">
+        <a href="#factor">Factor 20 <span class="arrow">&#9660;</span></a>
+        <div class="dropdown">
+          <a href="#factor">The Methodology</a>
+          <a href="#factor">20 Keys Treaty</a>
+          <a href="#factor">Day 21 Mutation</a>
+        </div>
+      </li>
 
-        <li class="nav-item has-dropdown">
-          <a href="#factor">Factor 20 <span class="arrow">▼</span></a>
-          <div class="dropdown">
-            <a href="#factor">The Methodology</a>
-            <a href="#factor-stages">20 Keys Treaty</a>
-            <a href="#day21">Day 21 Mutation</a>
-          </div>
-        </li>
+      <li class="nav-item">
+        <a href="#flaca">Bolivia</a>
+      </li>
 
-        <li class="nav-item">
-          <a href="#flaca">Bolivia</a>
-        </li>
+      <li class="nav-item">
+        <a href="#lines">Programs <span class="arrow">&#9660;</span></a>
+        <div class="dropdown">
+          <a href="#lines">Animal Rescue</a>
+          <a href="#lines">0 Alcohol Leadership</a>
+          <a href="#lines">Women Empowerment</a>
+          <a href="#lines">Media Truth</a>
+          <a href="#lines">Urban Hydroponics</a>
+          <a href="#lines">Culture &amp; Art</a>
+        </div>
+      </li>
 
-        <li class="nav-item has-dropdown">
-          <a href="#lines">Programs <span class="arrow">▼</span></a>
-          <div class="dropdown">
-            <a href="#lines">Animal Rescue</a>
-            <a href="#lines">0 Alcohol Leadership</a>
-            <a href="#lines">Women Empowerment</a>
-            <a href="#lines">Media Truth</a>
-            <a href="#lines">Urban Hydroponics</a>
-            <a href="#lines">Culture &amp; Art</a>
-          </div>
-        </li>
+      <li class="nav-item">
+        <a href="#koin">Flaca Koin</a>
+      </li>
 
-        <li class="nav-item">
-          <a href="#koin">Flaca Koin</a>
-        </li>
+      <li class="nav-item">
+        <a
+          href="https://dex.coinmarketcap.com/token/solana/GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="color: var(--orange-fire); border: 1px solid rgba(255,107,0,0.4); padding: 0.4rem 1.1rem; margin-left: 0.5rem;"
+        >
+          Buy Token
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-        <li class="nav-item nav-item-donate">
-          <a class="donate-link" href="#koin">Donate</a>
-        </li>
-      </ul>
-    </nav>
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
 
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="#identity">Foundation</a>
-      <a href="#mission">Mission</a>
-      <a href="#factor">Factor 20</a>
-      <a href="#flaca">Bolivia</a>
-      <a href="#lines">Programs</a>
-      <a href="#governance">Leadership</a>
-      <a href="#koin">Flaca Koin</a>
-      <a href="#koin" class="mobile-donate">Donate</a>
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      International Foundation &nbsp;·&nbsp; Est. February 2025
     </div>
-  </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-content container">
-        <div class="hero-badge">
-          <span class="hero-badge-dot"></span>
-          International Foundation · Est. February 2025
-        </div>
+    <h1>
+      Factor<br />
+      <span class="accent">Twenty</span>
+      <span class="sub-accent">Foundation</span>
+    </h1>
 
-        <h1>
-          Factor
-          <span class="accent">Twenty</span>
-          <span class="sub-accent">Foundation</span>
-        </h1>
+    <blockquote class="hero-quote">
+      "We do not reform behaviors; we transform the will. Factor 20 is the engine of structural human change."
+    </blockquote>
 
-        <blockquote class="hero-quote">
-          “We do not reform behaviors; we revolutionize the spirit. Factor 20 as the engine of life transformation.”
-        </blockquote>
+    <p class="hero-subtitle">
+      A 501(c)(3) international foundation building disciplined leadership,
+      ethical transformation, and life-saving animal rescue through a single institutional model:
+      <strong>Factor 20</strong>.
+    </p>
 
-        <p class="hero-subtitle">
-          A cutting-edge international entity dedicated to the structural transformation of the human being — bridging the legal solidity of the United States with the resilient soul of Bolivia.
-        </p>
+    <div class="hero-cta">
+      <a href="#factor" class="btn-primary">Discover Factor 20</a>
+      <a
+        href="https://dex.coinmarketcap.com/token/solana/GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump/"
+        class="btn-secondary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Flaca Koin
+      </a>
+    </div>
 
-        <div class="hero-cta">
-          <a href="#factor" class="btn-primary">Discover Factor 20</a>
-          <a href="#koin" class="btn-secondary">Support Flaca Koin</a>
-        </div>
+    <div class="hero-scroll">Scroll to explore</div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="identity" id="identity">
+    <div class="section-label">Institutional Identity</div>
+    <h2 class="section-title">A Global Hub for <span>Transformation</span></h2>
+    <p class="section-body">
+      The F20F Foundation creates an institutional ecosystem where discipline,
+      love, science of character, and social responsibility converge to restore dignity
+      to the most vulnerable.
+    </p>
+
+    <div class="identity-grid">
+      <div class="id-card">
+        <h3>USA — Legal and Operational Base</h3>
+        <ul>
+          <li><strong>Incorporated:</strong> February 2025, United States of America</li>
+          <li><strong>Headquarters:</strong> Silver Spring, Maryland &amp; Washington D.C.</li>
+          <li><strong>Status:</strong> 501(c)(3) non-profit organization</li>
+          <li><strong>Role:</strong> Global governance, compliance, institutional strategy and international coordination</li>
+          <li><strong>Function:</strong> Connects legal solidity with measurable social transformation</li>
+        </ul>
       </div>
 
-      <div class="hero-scroll">Scroll to explore</div>
-    </section>
+      <div class="id-card">
+        <h3>Bolivia — Emotional and Mission Heart</h3>
+        <ul>
+          <li><strong>Origin:</strong> Birthplace of the Flaca story and the spiritual core of the foundation</li>
+          <li><strong>Mission:</strong> Mass sterilization, major surgeries, and rescue support for abandoned animals</li>
+          <li><strong>Symbol:</strong> Flaca — a rescued dog whose recovery became our proof of concept</li>
+          <li><strong>Impact:</strong> Restoring dignity to animals, youth, women, and vulnerable communities</li>
+          <li><strong>Vision:</strong> Love converted into disciplined transformational technology</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <div class="divider"></div>
+  <div class="divider"></div>
 
-    <section class="identity" id="identity">
-      <div class="container">
-        <div class="section-label">Institutional Identity</div>
-        <h2 class="section-title">A Global Hub for <span>Transformation</span></h2>
+  <section class="mission" id="mission">
+    <div class="mission-img">
+      <img
+        src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=1200&q=80"
+        alt="Youth transformation program"
+        loading="lazy"
+      />
+      <div class="mission-img-badge">Our Mandate</div>
+    </div>
+
+    <div>
+      <div class="section-label">The Transformational Mission</div>
+      <h2 class="section-title">Reengineering the <span>Human Will</span></h2>
+      <p class="section-body">
+        F20F works to transform lives through the structural reengineering of the human will.
+        Our model joins youth potential, intergenerational discipline, ethical formation, and
+        institutional rigor to create durable social change.
+      </p>
+
+      <blockquote class="mission-quote">
+        "We form principled leaders, free from addictions, resistant to manipulation,
+        capable of serving truth, defending dignity, and changing society from within."
+      </blockquote>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="factor" id="factor">
+    <div class="factor-intro">
+      <div>
+        <div class="section-label">The Methodology</div>
+        <h2 class="section-title">The <span>Factor 20</span> System</h2>
         <p class="section-body">
-          Our operational architecture creates an ecosystem where experience and potential converge to restore the dignity of the most vulnerable.
+          Factor 20 is not motivational language and not a superficial routine.
+          It is a structured system for inner strengthening, ethical programming,
+          and permanent transformation of the will.
         </p>
-
-        <div class="identity-grid">
-          <article class="id-card">
-            <h3>USA — Operational Base</h3>
-            <ul>
-              <li><strong>Incorporated:</strong> February 2025, United States of America</li>
-              <li><strong>Headquarters:</strong> Silver Spring, Maryland &amp; Washington D.C.</li>
-              <li><strong>EIN:</strong> 33-xxxx43 · Department of the Treasury (IRS)</li>
-              <li><strong>Status:</strong> Non-profit 501(c)(3) organization</li>
-              <li><strong>Role:</strong> Directs global vision and ensures international regulatory compliance</li>
-            </ul>
-          </article>
-
-          <article class="id-card">
-            <h3>Bolivia — Emotional Heart</h3>
-            <ul>
-              <li><strong>Origin:</strong> Birthplace of the FACTOR 20 inspiration</li>
-              <li><strong>Mission:</strong> Mass sterilization and major surgeries for abandoned animals</li>
-              <li><strong>Symbol:</strong> Flaca — a rescued dog whose recovery became our proof of concept</li>
-              <li><strong>Impact:</strong> Restoring dignity to animals, children, and the elderly</li>
-              <li><strong>Vision:</strong> Where love becomes transformational technology</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="mission" id="mission">
-      <div class="container mission-grid">
-        <div class="mission-img">
-          <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=1400&q=80&auto=format&fit=crop" alt="Youth transformation program" loading="lazy">
-          <div class="mission-img-badge">Our Mandate</div>
-        </div>
-
-        <div class="mission-copy">
-          <div class="section-label">The Transformational Mission</div>
-          <h2 class="section-title">Reengineering the <span>Human Will</span></h2>
-          <p class="section-body">
-            We transform lives through the structural reengineering of the human will, utilizing our proprietary FACTOR 20 methodology. We fuse the potential of youth with the discipline of veteran experts to restore dignity to the most vulnerable.
-          </p>
-          <blockquote class="mission-quote">
-            “We are committed to forming principled leaders, free from addictions (0 Alcohol), empowering women as agents of change and defending media truth — proving that love is the ultimate technology that transforms everything.”
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="factor" id="factor">
-      <div class="container">
-        <div class="factor-intro">
-          <div>
-            <div class="section-label">The Methodology</div>
-            <h2 class="section-title">The <span>Factor 20</span> System</h2>
-            <p class="section-body">
-              A disruptive break from superficial approaches. Real change is not a habit formed by chance — it is a structural mutation occurring in the “silence” of the 20 days prior to any visible result.
-            </p>
-            <p class="section-body section-body-spaced">
-              While the world focuses on “Day 21” (the result), we work on the gestation and hardening of the will. The individual moves from vulnerability to conscious self-power, preparing biologically and spiritually for permanent change.
-            </p>
-          </div>
-
-          <div>
-            <div class="section-label">Science of Wanting to Be</div>
-            <h2 class="section-title section-title-small">Treaty of the <span>20 Keys</span></h2>
-            <p class="section-body">
-              Each day is an ethical reprogramming code for youth aged 13–20, structured across four transformational stages toward permanent human mutation.
-            </p>
-          </div>
-        </div>
-
-        <div class="factor-stages" id="factor-stages">
-          <article class="stage-card">
-            <div class="stage-num">I</div>
-            <div class="stage-tag">Days 1–5</div>
-            <h4>Foundation — Unlocking the Self</h4>
-            <p>The initial stage focuses on breaking inner barriers and establishing the foundation for lasting change.</p>
-            <div class="stage-keys">
-              <span class="key-pill">Faith</span>
-              <span class="key-pill">Firmness</span>
-              <span class="key-pill">Fortitude</span>
-              <span class="key-pill">Strength</span>
-              <span class="key-pill">Fearlessness</span>
-            </div>
-          </article>
-
-          <article class="stage-card">
-            <div class="stage-num">II</div>
-            <div class="stage-tag">Days 6–10</div>
-            <h4>Ignition — Forging Character</h4>
-            <p>The fire is lit. Character is shaped through discipline, passion, and unwavering commitment.</p>
-            <div class="stage-keys">
-              <span class="key-pill">Fervor</span>
-              <span class="key-pill">Focus</span>
-              <span class="key-pill">Fire</span>
-              <span class="key-pill">Fidelity</span>
-              <span class="key-pill">Favor</span>
-            </div>
-          </article>
-
-          <article class="stage-card">
-            <div class="stage-num">III</div>
-            <div class="stage-tag">Days 11–15</div>
-            <h4>Social Structure — Ethical Expansion</h4>
-            <p>The individual expands beyond themselves, contributing to community wellbeing and collective growth.</p>
-            <div class="stage-keys">
-              <span class="key-pill">Fairness</span>
-              <span class="key-pill">Freedom</span>
-              <span class="key-pill">Friendship</span>
-              <span class="key-pill">Prosperity</span>
-              <span class="key-pill">Future</span>
-            </div>
-          </article>
-
-          <article class="stage-card">
-            <div class="stage-num">IV</div>
-            <div class="stage-tag">Days 16–20</div>
-            <h4>Consolidation — Final Transcendence</h4>
-            <p>The will is fully hardened and the transformation permanently locked in as a new identity.</p>
-            <div class="stage-keys">
-              <span class="key-pill">Moving Forward</span>
-              <span class="key-pill">Responsibility</span>
-              <span class="key-pill">Awareness</span>
-              <span class="key-pill">Ethics</span>
-              <span class="key-pill">Transformation</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="day21" id="day21">
-          <div class="day21-num">21</div>
-          <div>
-            <p><strong>Day 21: The Permanent Mutation.</strong> After 20 days of silent inner work, the individual is fully matured and ready. This is not a habit — it is a complete structural change of the human will. The result the world sees on Day 21 is the fruit of an invisible revolution that happened within.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="flaca" id="flaca">
-      <div class="container flaca-grid">
-        <div class="flaca-img-wrap">
-          <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1400&q=80&auto=format&fit=crop" alt="Rescued dog Bolivia" loading="lazy">
-          <div class="flaca-img-label">The Flaca Effect</div>
-        </div>
-
-        <div>
-          <div class="section-label">Mystique of Origin</div>
-          <h2 class="section-title">Bolivia — Our <span>Emotional Heart</span></h2>
-          <p class="section-body">
-            Bolivia is the soul of the Foundation. In a landfill, seconds away from being crushed, a dog with shattered teeth and cancer was found. Her name became <strong>Flaca</strong>. Her miraculous recovery through love-turned-technique became our foundational proof of concept.
-          </p>
-          <p class="section-body section-body-spaced">
-            If Flaca could be reconstructed from the edge of destruction, our methodology can reconstruct the leadership and dignity of any human being. Love is not sentiment — it is a structural technology capable of rebuilding life from the ground up.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="lines" id="lines">
-      <div class="container">
-        <div class="section-label">Programs &amp; Initiatives</div>
-        <h2 class="section-title">Strategic Lines <span>of Action</span></h2>
+        <br />
         <p class="section-body">
-          Six pillars of transformation spanning animal welfare, food sovereignty, media literacy, and human leadership.
+          The visible result appears on Day 21, but the real revolution occurs during the
+          previous 20 days: the hidden stage where the will hardens, identity stabilizes,
+          and transformation becomes irreversible.
         </p>
-
-        <div class="lines-grid">
-          <article class="line-card">
-            <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1200&q=70&auto=format&fit=crop" alt="Animal rescue" loading="lazy">
-            <div class="line-overlay">
-              <h3>Animal Rescue &amp; Transformation</h3>
-              <p>Funds exclusively for mass sterilization and major surgeries for abandoned animals in Bolivia via Flaca Koin.</p>
-            </div>
-          </article>
-
-          <article class="line-card">
-            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1200&q=70&auto=format&fit=crop" alt="Youth leadership" loading="lazy">
-            <div class="line-overlay">
-              <h3>Positive Leadership &amp; 0 Alcohol</h3>
-              <p>Establishing sobriety as the biological and spiritual foundation for leaders to master their own will.</p>
-            </div>
-          </article>
-
-          <article class="line-card">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=70&auto=format&fit=crop" alt="Women empowerment" loading="lazy">
-            <div class="line-overlay">
-              <h3>Women as Agents of Change</h3>
-              <p>Empowering women to lead in crisis management and innovation with structural resilience.</p>
-            </div>
-          </article>
-
-          <article class="line-card">
-            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&q=70&auto=format&fit=crop" alt="Media truth democracy" loading="lazy">
-            <div class="line-overlay">
-              <h3>Media Truth &amp; Democracy</h3>
-              <p>Training leaders to discern truth from “Fake News” and protect modern democratic societies.</p>
-            </div>
-          </article>
-
-          <article class="line-card">
-            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1200&q=70&auto=format&fit=crop" alt="Urban hydroponics" loading="lazy">
-            <div class="line-overlay">
-              <h3>Food Sovereignty — Hydroponics</h3>
-              <p>F20 youth in Maryland, DC &amp; Virginia teach local food production and restore the link with the earth.</p>
-            </div>
-          </article>
-
-          <article class="line-card">
-            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1200&q=70&auto=format&fit=crop" alt="Art and culture youth" loading="lazy">
-            <div class="line-overlay">
-              <h3>Cultural Work — Nature &amp; Art</h3>
-              <p>Connecting youth with genius legacies to develop deep thinking against digital vacuity.</p>
-            </div>
-          </article>
-        </div>
       </div>
-    </section>
 
-    <div class="divider"></div>
-
-    <section class="governance" id="governance">
-      <div class="container">
-        <div class="section-label">Elite Governance</div>
-        <h2 class="section-title">The Gears of <span>Excellence</span></h2>
+      <div>
+        <div class="section-label">Science of Wanting to Be</div>
+        <h2 class="section-title" style="font-size: 2.2rem;">Treaty of the <span>20 Keys</span></h2>
         <p class="section-body">
-          Leadership that fuses decorated discipline with proactive youth energy — generations united by transformational purpose.
+          A sequence of ethical codes designed to move the person from vulnerability to
+          conscious self-mastery through four transformational stages.
         </p>
+      </div>
+    </div>
 
-        <div class="gov-grid">
-          <article class="gov-card">
-            <div class="gov-role">Founder &amp; CEO</div>
-            <div class="gov-name">Janine Teran</div>
-            <p>Visionary architect of the structural transformation methodology and legal guarantor before U.S. federal authorities. Creator of the FACTOR 20 system.</p>
-            <span class="gov-badge">Creator of Factor 20</span>
-          </article>
-
-          <article class="gov-card">
-            <div class="gov-role">Co-Founders · Youth Leadership Board</div>
-            <div class="gov-name">Leandro &amp; Alessandro Vejarano Teran</div>
-            <p>Representatives of “F20 Potentiality” — ages 17 and 15 — providing vibrant intelligence to generate positive leadership in the new generation.</p>
-            <span class="gov-badge">Next Generation Leaders</span>
-          </article>
-
-          <article class="gov-card">
-            <div class="gov-role">Guardian Trust</div>
-            <div class="gov-name">J. Kim</div>
-            <p>Decorated for Excellence by U.S. President George W. Bush. Provides maximum administrative rigor and safeguards institutional transparency.</p>
-            <span class="gov-badge">Presidential Recognition</span>
-          </article>
-
-          <article class="gov-card">
-            <div class="gov-role">Compliance &amp; Innovation Specialist</div>
-            <div class="gov-name">Luis Losada</div>
-            <p>Ensures full project alignment with democratic integrity and human rights across all international operational contexts.</p>
-            <span class="gov-badge">Democratic Integrity</span>
-          </article>
-
-          <article class="gov-card">
-            <div class="gov-role">Cooperation &amp; Strategic Discipline</div>
-            <div class="gov-name">David Coon</div>
-            <p>Representative of the Native American community, contributing ancestral wisdom in discipline and operational order.</p>
-            <span class="gov-badge">Ancestral Wisdom</span>
-          </article>
-
-          <article class="gov-card gov-card-motto">
-            <div class="gov-role">Core Belief</div>
-            <div class="gov-name">Institutional Motto</div>
-            <p class="gov-motto">“Love changes everything. It transforms everything.”</p>
-            <span class="gov-badge">F20F Foundation</span>
-          </article>
+    <div class="factor-stages">
+      <div class="stage-card">
+        <div class="stage-num">I</div>
+        <div class="stage-tag">Days 1–5</div>
+        <h4>Foundation — Unlocking the Self</h4>
+        <p>
+          The first stage confronts weakness, noise, and fragmentation. The goal is inner order,
+          moral opening, and the beginning of structural self-command.
+        </p>
+        <div class="stage-keys">
+          <span class="key-pill">Faith</span>
+          <span class="key-pill">Firmness</span>
+          <span class="key-pill">Fortitude</span>
+          <span class="key-pill">Strength</span>
+          <span class="key-pill">Fearlessness</span>
         </div>
       </div>
-    </section>
 
-    <div class="divider"></div>
-
-    <section class="koin" id="koin">
-      <div class="container">
-        <div class="section-label">Digital Asset · Solana Blockchain</div>
-        <h2 class="section-title">Flaca <span>Koin</span></h2>
-        <p class="koin-sub">
-          Finance life-saving surgeries for abandoned animals in Bolivia. Every swap supports mass sterilization programs and critical veterinary care through the Binance Web3 wallet.
+      <div class="stage-card">
+        <div class="stage-num">II</div>
+        <div class="stage-tag">Days 6–10</div>
+        <h4>Ignition — Forging Character</h4>
+        <p>
+          Discipline becomes active. Identity begins to hold form under pressure,
+          and the person learns to sustain commitment instead of depending on emotion.
         </p>
-
-        <div class="koin-steps">
-          <article class="koin-step">
-            <div class="koin-step-num">01</div>
-            <p>Open the <strong>Binance App</strong> and navigate to <strong>Wallet → Web3</strong>.</p>
-          </article>
-          <article class="koin-step">
-            <div class="koin-step-num">02</div>
-            <p>Load <strong>Solana (SOL)</strong> into your Web3 wallet.</p>
-          </article>
-          <article class="koin-step">
-            <div class="koin-step-num">03</div>
-            <p>Use the <strong>Flaca Koin contract</strong> address shown below.</p>
-          </article>
-          <article class="koin-step">
-            <div class="koin-step-num">04</div>
-            <p><strong>Swap SOL</strong> for Flaca Koin and support the mission.</p>
-          </article>
-        </div>
-
-        <div class="koin-contract">
-          <span class="contract-label">Solana Contract Address · Ticker: FlacaKoin</span>
-          <button class="contract-copy" id="copy-contract" type="button" data-contract="GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump">
-            <span class="contract-addr">GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump</span>
-            <span class="contract-action">Copy</span>
-          </button>
+        <div class="stage-keys">
+          <span class="key-pill">Fervor</span>
+          <span class="key-pill">Focus</span>
+          <span class="key-pill">Fire</span>
+          <span class="key-pill">Fidelity</span>
+          <span class="key-pill">Favor</span>
         </div>
       </div>
-    </section>
-  </main>
+
+      <div class="stage-card">
+        <div class="stage-num">III</div>
+        <div class="stage-tag">Days 11–15</div>
+        <h4>Social Structure — Ethical Expansion</h4>
+        <p>
+          The transformed will begins to project outward. Leadership, cooperation,
+          justice, and social conscience become practical responsibilities.
+        </p>
+        <div class="stage-keys">
+          <span class="key-pill">Fairness</span>
+          <span class="key-pill">Freedom</span>
+          <span class="key-pill">Friendship</span>
+          <span class="key-pill">Prosperity</span>
+          <span class="key-pill">Future</span>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <div class="stage-num">IV</div>
+        <div class="stage-tag">Days 16–20</div>
+        <h4>Consolidation — Final Transcendence</h4>
+        <p>
+          The will is consolidated into identity. The person is no longer reacting to life,
+          but governing it through awareness, responsibility, ethics, and direction.
+        </p>
+        <div class="stage-keys">
+          <span class="key-pill">Moving Forward</span>
+          <span class="key-pill">Responsibility</span>
+          <span class="key-pill">Awareness</span>
+          <span class="key-pill">Ethics</span>
+          <span class="key-pill">Transformation</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day21">
+      <div class="day21-num">21</div>
+      <div>
+        <p>
+          <strong>Day 21: The Permanent Mutation.</strong>
+          What the world sees as an external result is actually the visible expression of
+          an internal process already completed. Factor 20 does not create a habit. It forms
+          a new structure of will.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="flaca" id="flaca">
+    <div class="flaca-img-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&q=80"
+        alt="Flaca rescue mission"
+        loading="lazy"
+      />
+      <div class="flaca-img-label">The Flaca Effect</div>
+    </div>
+
+    <div>
+      <div class="section-label">Mystique of Origin</div>
+      <h2 class="section-title">Bolivia — Our <span>Emotional Heart</span></h2>
+      <p class="section-body">
+        The emotional origin of F20F is Bolivia. There, a dog found at the edge of destruction
+        was rescued, treated, reconstructed, and loved back into life. Her name was
+        <strong style="color: var(--white);">Flaca</strong>.
+      </p>
+      <br />
+      <p class="section-body">
+        Flaca became the living proof that love, when executed with discipline, method, and continuity,
+        can become real transformational technology. What happened to her is the symbolic foundation
+        of what F20F seeks to do for human beings and vulnerable communities.
+      </p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="lines" id="lines">
+    <div class="section-label">Programs &amp; Initiatives</div>
+    <h2 class="section-title">Strategic Lines <span>of Action</span></h2>
+    <p class="section-body">
+      Six pillars of intervention connecting animal welfare, youth leadership, truth,
+      resilience, culture, and food sovereignty.
+    </p>
+
+    <div class="lines-grid" style="margin-top: 3rem;">
+      <div class="line-card">
+        <img
+          src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=900&q=70"
+          alt="Animal rescue"
+          loading="lazy"
+        />
+        <div class="line-overlay">
+          <h3>Animal Rescue &amp; Transformation</h3>
+          <p>
+            Flaca Koin and institutional funding support surgeries, sterilization campaigns,
+            and rescue interventions for abandoned animals in Bolivia.
+          </p>
+        </div>
+      </div>
+
+      <div class="line-card">
+        <img
+          src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=900&q=70"
+          alt="Youth leadership"
+          loading="lazy"
+        />
+        <div class="line-overlay">
+          <h3>Positive Leadership &amp; 0 Alcohol</h3>
+          <p>
+            We establish sobriety, self-command, and moral discipline as the biological
+            and spiritual base of authentic leadership.
+          </p>
+        </div>
+      </div>
+
+      <div class="line-card">
+        <img
+          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=70"
+          alt="Women empowerment"
+          loading="lazy"
+        />
+        <div class="line-overlay">
+          <h3>Women as Agents of Change</h3>
+          <p>
+            Women are empowered as leaders in resilience, care systems, crisis response,
+            and transformational social intelligence.
+          </p>
+        </div>
+      </div>
+
+      <div class="line-card">
+        <img
+          src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&q=70"
+          alt="Media truth democracy"
+          loading="lazy"
+        />
+        <div class="line-overlay">
+          <h3>Media Truth &amp; Democracy</h3>
+          <p>
+            We train citizens and young leaders to identify manipulation, reject fake narratives,
+            and defend democratic truth.
+          </p>
+        </div>
+      </div>
+
+      <div class="line-card">
+        <img
+          src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=900&q=70"
+          alt="Urban hydroponics"
+          loading="lazy"
+        />
+        <div class="line-overlay">
+          <h3>Food Sovereignty — Hydroponics</h3>
+          <p>
+            Urban food production, resilience training, and practical sustainability
+            reconnect communities with disciplined self-sufficiency.
+          </p>
+        </div>
+      </div>
+
+      <div class="line-card">
+        <img
+          src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=900&q=70"
+          alt="Culture and art"
+          loading="lazy"
+        />
+        <div class="line-overlay">
+          <h3>Cultural Work — Nature &amp; Art</h3>
+          <p>
+            We reconnect youth with art, nature, memory, and great human legacies to resist
+            digital emptiness and recover depth.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="governance" id="governance">
+    <div class="section-label">Elite Governance</div>
+    <h2 class="section-title">The Gears of <span>Excellence</span></h2>
+    <p class="section-body">
+      A leadership model that combines legal discipline, veteran rigor, and youth energy
+      under one transformational institutional mission.
+    </p>
+
+    <div class="gov-grid">
+      <div class="gov-card">
+        <div class="gov-role">Founder &amp; CEO</div>
+        <div class="gov-name">Janine Teran</div>
+        <p>
+          Visionary architect of the structural transformation methodology and creator of the
+          Factor 20 system. Responsible for institutional direction and international legal coherence.
+        </p>
+        <span class="gov-badge">Creator of Factor 20</span>
+      </div>
+
+      <div class="gov-card">
+        <div class="gov-role">Co-Founders · Youth Leadership Board</div>
+        <div class="gov-name">Leandro &amp; Alessandro Vejarano Teran</div>
+        <p>
+          Representatives of youth potential and next-generation leadership, contributing energy,
+          intelligence, and practical insight into the future of the model.
+        </p>
+        <span class="gov-badge">Next Generation Leaders</span>
+      </div>
+
+      <div class="gov-card">
+        <div class="gov-role">Guardian Trust</div>
+        <div class="gov-name">J. Kim</div>
+        <p>
+          Provides administrative rigor, institutional discipline, and high-level trust architecture
+          to safeguard transparency and operational seriousness.
+        </p>
+        <span class="gov-badge">Institutional Safeguard</span>
+      </div>
+
+      <div class="gov-card">
+        <div class="gov-role">Compliance &amp; Innovation Specialist</div>
+        <div class="gov-name">Luis Losada</div>
+        <p>
+          Supports ethical alignment, democratic coherence, and innovation discipline across
+          projects, communications, and operational frameworks.
+        </p>
+        <span class="gov-badge">Democratic Integrity</span>
+      </div>
+
+      <div class="gov-card">
+        <div class="gov-role">Cooperation &amp; Strategic Discipline</div>
+        <div class="gov-name">David Coon</div>
+        <p>
+          Contributes intercultural wisdom, discipline, and strategic order, reinforcing
+          institutional balance and long-range responsibility.
+        </p>
+        <span class="gov-badge">Strategic Discipline</span>
+      </div>
+
+      <div class="gov-card" style="background: rgba(255,107,0,0.04); border-color: rgba(255,107,0,0.18);">
+        <div class="gov-role">Institutional Core</div>
+        <div class="gov-name" style="color: var(--orange-fire);">Foundational Motto</div>
+        <p style="font-style: italic; font-size: 1.05rem; color: var(--off-white); line-height: 1.65;">
+          "Love changes everything. It transforms everything."
+        </p>
+        <span class="gov-badge">F20F Foundation</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="koin" id="koin">
+    <div class="section-label">Digital Asset · Solana Blockchain</div>
+    <h2 class="section-title">Flaca <span>Koin</span></h2>
+    <p class="koin-sub">
+      Flaca Koin is the digital support layer of the mission. Its purpose is clear:
+      help finance surgeries, sterilization campaigns, and emergency veterinary action
+      for abandoned animals in Bolivia.
+    </p>
+
+    <div class="koin-steps">
+      <div class="koin-step">
+        <div class="koin-step-num">01</div>
+        <p>Open your preferred Solana-compatible wallet or Web3 access point.</p>
+      </div>
+      <div class="koin-step">
+        <div class="koin-step-num">02</div>
+        <p>Fund the wallet with <strong>SOL</strong> for the swap and network fees.</p>
+      </div>
+      <div class="koin-step">
+        <div class="koin-step-num">03</div>
+        <p>Use the official Flaca Koin contract address shown below.</p>
+      </div>
+      <div class="koin-step">
+        <div class="koin-step-num">04</div>
+        <p>Access the live token page and support the rescue mission directly.</p>
+      </div>
+    </div>
+
+    <div class="koin-contract">
+      <span class="contract-label">Solana Contract Address · Ticker: FlacaKoin</span>
+      <span class="contract-addr">GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump</span>
+    </div>
+
+    <div class="hero-cta" style="justify-content: center; margin-top: 2rem;">
+      <a
+        href="https://dex.coinmarketcap.com/token/solana/GPaj4cmd1oCxhH5Hi4dTkz9k79oeS3tabjp1ANL2pump/"
+        class="btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Open Live Token Page
+      </a>
+      <a href="mailto:info@f20ffoundation.org" class="btn-secondary">
+        Institutional Contact
+      </a>
+    </div>
+  </section>
 
   <footer>
-    <div class="container footer-top">
+    <div class="footer-top">
       <div class="footer-brand">
         <span class="footer-brand-logo">F20<span>F</span></span>
         <p>
-          The F20F Foundation is a 501(c)(3) non-profit headquartered in Silver Spring, Maryland and Washington D.C., with operations in Bolivia. EIN: 33-xxxx43.
+          F20F Foundation is a 501(c)(3) non-profit with operational roots in the United States
+          and mission impact in Bolivia, advancing Factor 20, disciplined leadership, and the Flaca rescue mission.
         </p>
       </div>
 
       <div class="footer-col">
         <h4>Programs</h4>
         <ul>
-          <li>Animal Rescue (Flaca)</li>
+          <li>Animal Rescue</li>
           <li>0 Alcohol Leadership</li>
           <li>Women Empowerment</li>
           <li>Media Truth</li>
@@ -465,17 +568,17 @@
       <div class="footer-col">
         <h4>The Method</h4>
         <ul>
-          <li>Stage I · Foundation (1–5)</li>
-          <li>Stage II · Ignition (6–10)</li>
-          <li>Stage III · Social (11–15)</li>
-          <li>Stage IV · Transcendence (16–20)</li>
+          <li>Stage I · Foundation</li>
+          <li>Stage II · Ignition</li>
+          <li>Stage III · Ethical Expansion</li>
+          <li>Stage IV · Consolidation</li>
           <li>Day 21 · Permanent Mutation</li>
         </ul>
       </div>
     </div>
 
-    <div class="container footer-bottom">
-      <p>© <span id="current-year">2025</span> F20F Foundation — Factor 20. All rights reserved. 501(c)(3) Non-Profit Organization.</p>
+    <div class="footer-bottom">
+      <p>© 2025 F20F Foundation — Factor 20. All rights reserved.</p>
       <div class="footer-motto">Love Changes Everything</div>
     </div>
   </footer>
